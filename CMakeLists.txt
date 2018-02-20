@@ -5,6 +5,7 @@ project(vulkan-tutorial VERSION 0.1 LANGUAGES CXX)
 # Must use GNUInstallDirs to install libraries into correct
 # locations on all platforms.
 include(GNUInstallDirs)
+include(cmake/glsl-to-spirv.cmake)
 
 # Include Boost as an imported target
 set(GLFW_BUILD_EXAMPLES OFF)
