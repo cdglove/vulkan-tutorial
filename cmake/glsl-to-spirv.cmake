@@ -23,11 +23,11 @@ function(target_add_glsl)
   endforeach(GLSL)
 
   add_custom_target(
-      Shaders 
+      ${GLSL_TARGET}-shaders 
       DEPENDS ${SPIRV_BINARY_FILES}
       )
 
-  add_dependencies(${GLSL_TARGET} Shaders)
+  add_dependencies(${GLSL_TARGET} ${GLSL_TARGET}-shaders)
 
   add_custom_command(TARGET ${GLSL_TARGET} POST_BUILD
       COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:${GLSL_TARGET}>/${GLSL_DESTINATION}/"
