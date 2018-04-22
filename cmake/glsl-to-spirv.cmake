@@ -16,10 +16,10 @@ function(target_add_glsl)
     set(SPIRV "${GLSL_DESTINATION}/${FILE_NAME}.spv")
     add_custom_command(
       OUTPUT ${SPIRV}
-      COMMAND ${CMAKE_COMMAND} -E make_directory "${PROJECT_BINARY_DIR}/${GLSL_DESTINATION}/"
-      COMMAND ${GLSL_VALIDATOR} -V ${CMAKE_CURRENT_SOURCE_DIR}/${GLSL} -o ${SPIRV}
+      COMMAND ${CMAKE_COMMAND} -E make_directory "${GLSL_DESTINATION}/"
+      COMMAND ${GLSL_VALIDATOR} -V "${CMAKE_CURRENT_SOURCE_DIR}/${GLSL}" -o "${SPIRV}"
       DEPENDS ${GLSL})
-    list(APPEND SPIRV_BINARY_FILES ${SPIRV})
+    list(APPEND SPIRV_BINARY_FILES "${SPIRV}")
   endforeach(GLSL)
 
   add_custom_target(

@@ -4,3 +4,9 @@
 [submodule "contrib/glfw"]
 	path = contrib/glfw
 	url = git@github.com:glfw/glfw.git
+[submodule "contrib/stb"]
+	path = contrib/stb
+	url = git@github.com:nothings/stb.git
+[submodule "contrib/tinyobjloader"]
+	path = contrib/tinyobjloader
+	url = git@github.com:syoyo/tinyobjloader.git
