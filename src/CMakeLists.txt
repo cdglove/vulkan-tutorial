@@ -1,5 +1,7 @@
+set(SOURCES_SRC_CMN ../cmn/stb_image.cpp ../cmn/tinyobjloader.cpp)
 add_subdirectory(hello-vulkan)
 add_subdirectory(shader-modules)
 add_subdirectory(hello-triangle)
 add_subdirectory(model-loading)
 add_subdirectory(mip-mapping)
+add_subdirectory(multisampling)

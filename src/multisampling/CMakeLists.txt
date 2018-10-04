@@ -1,7 +1,8 @@
 find_package(Vulkan REQUIRED)
+set(TARGET_NAME multisampling)
 
-set(TARGET_NAME model-loading)
-add_executable(${TARGET_NAME}
+add_executable(
+	${TARGET_NAME}
 	main.cpp
 	${SOURCES_SRC_CMN})
 
